@@ -5,7 +5,7 @@ sources:
 
   git:
     - name: 'osx'
-      repo: 'my-git-repo'
+      repo: 'https://github.com/alexrecarey/battleschool-config.git'
       playbooks:
         - homebrew.yml          # install homebrew
         - homebrew-casks.yml    # install general GUI Apps
