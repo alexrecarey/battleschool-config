@@ -1,0 +1,25 @@
+---
+- hosts: workstation
+
+  tasks:
+    - name: print from playbook
+      debug: msg="in python.yml playbook"
+
+    - name: easy install pip
+      easy_install: name=pip
+      sudo: yes
+
+    - name: install apps from pip
+      pip: name={{item}}
+      sudo: yes
+      with_items:
+          - virtualenv
+          - virtualenvwrapper
+          - cliff
+          - pyyaml
+          - awscli
+
+# Might not be necessary. Check first.
+#    - name: Creates mkvirtualenv directory
+#      file: path=~/.virtualenvs state=directory
+

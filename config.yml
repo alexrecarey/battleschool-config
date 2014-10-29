@@ -1,0 +1,12 @@
+---
+chache_dir: ~/Library/Caches/battleschool
+
+sources:
+
+  git:
+    - name: 'osx'
+      repo: 'my-git-repo'
+      playbooks:
+        - homebrew.yml          # install homebrew
+        - homebrew-casks.yml    # install general GUI Apps
+        - python.yml            # Setup python dev environment
